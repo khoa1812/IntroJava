@@ -36,18 +36,26 @@ public class DocSo {
         int chuc = (number % 100) / 10;
         int dv = number % 10;
 
-        String ketQua = tram > 0 ? donVi[tram] + " trăm " : "";
+        String ketQua = "";
+        if (tram > 0) {
+            ketQua = donVi[tram] + " trăm ";
+        }
 
         if (chuc > 1) {
             ketQua += donVi[chuc] + " mươi ";
-            ketQua += dv > 0 ? donVi[dv] : "";
+            if (dv > 0) {
+                ketQua += donVi[dv];
+            }
         } else if (chuc == 1) {
-            ketQua += "mươi " + donVi[dv];
+            ketQua += "mươi ";
+            ketQua += donVi[dv];
         } else {
-            ketQua += dv > 0 ? "linh " + donVi[dv] : "";
+            if (dv > 0) {
+                ketQua += "linh " + donVi[dv];
+            }
         }
 
-        return ketQua.trim();
+        return ketQua;
     }
 }
 

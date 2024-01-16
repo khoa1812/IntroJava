@@ -18,6 +18,7 @@ public class DocSo {
 
     private static String docSo(int number) {
         String[] donVi = {"", "một", "hai", "ba", "bốn", "năm", "sáu", "bảy", "tám", "chín"};
+        String[] donVix = {"", "mốt", "hai", "ba", "bốn", "lăm", "sáu", "bảy", "tám", "chín"};
         String[] dacBiet = {"mười", "mười một", "mười hai", "mười ba", "mười bốn", "mười lăm", "mười sáu", "mười bảy", "mười tám", "mười chín"};
 
         if (number == 0) {
@@ -44,10 +45,10 @@ public class DocSo {
         if (chuc > 1) {
             ketQua += donVi[chuc] + " mươi ";
             if (dv > 0) {
-                ketQua += donVi[dv];
+                ketQua += donVix[dv];
             }
         } else if (chuc == 1) {
-            ketQua += "mươi ";
+            ketQua += "mười ";
             ketQua += donVi[dv];
         } else {
             if (dv > 0) {
